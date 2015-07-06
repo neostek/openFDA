@@ -1,38 +1,40 @@
-# NEOSTEK™ openFDA Demo
+# NEOSTEK™ Open FDA API Theorectical Sequencing Demo
 
-NEOSTEK openFDA Demo is a pilot project to brilliantly consume openFDA Drugs API via http://open.fda.gov against DNA sequencing representation via the AngularJS Plasmid.
+NEOSTEK™ is pleased to submit it's prototype of the Open FDA API for Development pool (pool two).
 
-*Please note that openFDA is a beta research project and not for clinical use. 
+## Live Prototype
+[Demo](https://openfda.neostek.com) is hosted on an Amazon Web Service (AWS) EC2 Linux instance and operated in accordance with AWS terms of services <http://aws.amazon.com/legal/>
 
 # Contents
 
 This repository contains the main openfda.neostek.com website:
 
-* A [Foundation Apps] (http://foundation.zurb.com/apps) mobile first site
-* [Gulp](http://gruntjs.com/) is used for configuration management and building CSS (from LESS) and minified JS
-* D3 Charting Libraries is a visual component using AngularJS and SVG
-* Angular Plasmid is a plasmid visualization component using AngularJS and SVG.
+# Development and DevOps Stack
 
-# Running the site
+* [Zurb Foundation Apps](http://getbootstrap.com/) - Defacto standard for mobile-first framework and UI
+* [AngularJs](https://angularjs.org/) - JavaScript based Single Page Application(s) Javascript Framework
+* [D3JS] (http://d3js.org/) - Data visualization
+* [Gulp](http://gulpjs.com/) - Build / Configuration tool for Javascript application stacks
+* [Docker](https://www.docker.com/) - For Running our Docker Image
+* [Angular Plasmid]() - Angular Plasmid is a plasmid visualization component using AngularJS and SVG.
+
+# Building from source
 
 Install bundler , bower, FoundationApps and gulp:
 
 ```bash
-npm install -g grunt-cli bundler foundation-cli bower gulp
+npm install -g grunt-cli foundation-cli bundler bower gulp
 gem install bundler
 cd /path/to/this/repo
-bundle install
 ```
 
-Get Grunt watching for any changes to assets:
+Get Foundation Apps watching for any changes to assets:
 
 ```bash
 foundation-apps watch
 ```
 
-Get the site running at `http://localhost:3000` with:
-
 # Prerequisites
 
 * Node 0.10.*
-* Python 2.* (because of [pygments](https://github.com/tmm1/pygments.rb) syntax highlighting)
+* Zurb Foundation Apps 1.*
