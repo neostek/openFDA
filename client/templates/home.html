@@ -1,0 +1,85 @@
+---
+name: home
+url: /
+---
+
+<div class="grid-container">
+  <h1>Welcome to openFDA</h1>
+  <div ng-controller="demo">
+     <nvd3 options="options" data="data" api="openFDA.api"></nvd3>
+     <plasmid id='p1' plasmidheight="450" plasmidwidth="600" sequencelength='1000'>
+            <plasmidtrack id='t1' radius="160" width="25">
+                <tracklabel labelclass="tracklabeltitle" text="openFDA" vadjust="-10"></tracklabel>
+                <tracklabel labelclass="tracklabelbody" text="Genomics" vadjust="25"></tracklabel>
+                <trackscale interval="10" tickclass="scale-minor"></trackscale>
+                <trackscale interval="50" tickclass="scale-major" showlabels="1" labelclass="scale-majortext"></trackscale>
+    
+                <trackmarker start="710" end="800" markerclass="noncodingregion" vadjust="55" arrowendlength="4" arrowendwidth="4" arrowstartlength="4" arrowstartwidth="4" wadjust="-10">
+                    <markerlabel labelclass="noncodinglabel" style="font-weight:400;kerning:2" text="710 - 800" type="path" vadjust="1"></markerlabel>
+                    <markerlabel labelclass="noncodinglabel" text="Non-Coding" vadjust="35" hadjust="0"></markerlabel>
+                    <markerlabel labelclass="noncodinglabel" text="Region" vadjust="35" hadjust="-3"></markerlabel>
+                </trackmarker>
+                
+                <trackmarker markerclass="markerhover" start="130" end="229" style="fill:rgba(255,0,0,0.4)" arrowendlength="4" wadjust="8" vadjust="-4" markerclick="markerClick($event,$marker)">
+                <markerlabel labelclass="markerlabel" text="FORWARD" type="path" style="fill:#fff" vadjust="5"></markerlabel>
+                <markerlabel labelclass="markerlabel" text="Primer" type="path" style="fill:#fff" vadjust="-5"></markerlabel>
+                </trackmarker>
+                
+                <trackmarker start="75" style="stroke:#c00;stroke-width:2px" wadjust="12" vadjust="-6">
+                    <markerlabel labelclass="featurelabel" text="Cologuard" type="path" valign="outer" hadjust="-2" vadjust="38"></markerlabel>
+                    <svgelement type="a" xlink:href="http://www.fda.gov/NewsEvents/Newsroom/PressAnnouncements/ucm409021.htm" target="_blank">
+                        <markerlabel labelclass="featurelabel" style="font-size:11px;font-weight:300" text="Click for details..." type="path" valign="outer" hadjust="-2" vadjust="25" showline="1" linestyle="stroke:#666;stroke-dasharray:2,2" linevadjust="-10"></markerlabel>
+                    </svgelement>
+                    <markerlabel labelclass="featurelabel" text="75" type="path" valign="inner" vadjust="-5"></markerlabel>
+                </trackmarker>
+                <trackmarker start="230" style="stroke:#c00;stroke-width:2px" wadjust="12" vadjust="-6">
+                    <svgelement type="a" xlink:href="http://www.fda.gov/NewsEvents/Newsroom/PressAnnouncements/ucm394773.htm" target="_blank"><markerlabel labelclass="featurelabel" text="HPV" type="path" valign="outer" hadjust="2" vadjust="30" showline="1" linestyle="stroke:#666;stroke-dasharray:2,2" linevadjust="-10"></markerlabel></svgelement>
+                    <markerlabel labelclass="featurelabel" text="230" type="path" valign="inner" vadjust="-5"></markerlabel>
+                </trackmarker>
+                <trackmarker markerclass="markerhover" start="231" end="350" style="fill:rgba(128,0,0,0.4)" arrowstartlength="4" wadjust="8" vadjust="-4" markerclick="markerClick($event,$marker)">
+                    <markerlabel labelclass="markerlabel" text="REVERSE" type="path" style="fill:#fff" vadjust="5"></markerlabel>
+                    <markerlabel labelclass="markerlabel" text="Primer" type="path" style="fill:#fff" vadjust="-5"></markerlabel>
+                </trackmarker>
+    
+                <trackmarker markerclass="markerhover" start="802" end="980" style="fill:rgba(0,128,0,0.1)" wadjust="30" markerclick="markerClick($event,$marker)">
+                    <markerlabel labelclass="regionlabel" text="Sequencing Region" type="path" style="fill:rgba(0,128,0,.6)" vadjust="40"></markerlabel>
+                </trackmarker>
+                <trackmarker start="802" style="stroke:rgba(0,64,0,0.5);stroke-dasharray:3,1;" wadjust="30">
+                    <markerlabel labelclass="regionlabel" text="802" type="path" style="fill:rgba(0,128,0,.6)" valign="inner" vadjust="-5"></markerlabel>
+                </trackmarker>
+                <trackmarker start="980" style="stroke:rgba(0,64,0,0.5);stroke-dasharray:3,1;" wadjust="30">
+                    <markerlabel labelclick="labelClick($event,$label)" labelclass="regionlabel" text="980" type="path" style="fill:rgba(0,128,0,.6)" valign="inner" vadjust="-5"></markerlabel>
+                </trackmarker>
+    
+                <trackmarker start="462" end="712" style="fill:rgba(0,0,128,.4)" vadjust="3" arrowendlength="4" arrowendwidth="4" wadjust="-5">
+                    <markerlabel text="TARGET PROTEINS" type="path" style="fill:rgba(0,0,64,.7);font-family:'Lato';font-size:12px;font-weight:700" vadjust="45"></markerlabel>
+                </trackmarker>
+                <trackmarker markerclass="markerhover" style="fill:rgba(0,0,128,.4)" start="482" end="567" wadjust="8" vadjust="-4" markerclick="markerClick($event, $marker)">
+                    <markerlabel labelclass="markerlabel" text="LEUII" style="fill:#fff;font-weight:700"></markerlabel>
+                </trackmarker>
+                <trackmarker markerclass="markerhover" style="fill:rgba(0,0,128,.4)" start="585" end="645" wadjust="8" vadjust="-4" markerclick="markerClick($event, $marker)">
+                    <markerlabel labelclass="markerlabel" text="AMPR" style="fill:#fff;font-weight:700"></markerlabel>
+                </trackmarker>
+                <trackmarker markerclass="markerhover" style="fill:rgba(0,0,128,.4)" start="661" end="692" wadjust="8" vadjust="-4" markerclick="markerClick($event, $marker)">
+                    <markerlabel labelclass="markerlabel" text="ADHI" style="fill:#fff;font-weight:700"></markerlabel>
+                </trackmarker>
+                <trackmarker start="462" style="stroke:rgba(0,0,64,.7);stroke-width:2px;stroke-dasharray:4,2" vadjust="-7" wadjust="15">
+                    <markerlabel text="462" style="fill:rgba(0,0,64,.7);font:700 10px 'Lato'" vadjust="-35"></markerlabel>
+                </trackmarker>
+                <trackmarker start="712" style="stroke:rgba(0,0,64,.7);stroke-width:2px;stroke-dasharray:4,2" vadjust="-7" wadjust="15">
+                    <markerlabel text="712" style="fill:rgba(0,0,64,.7);font:700 10px 'Lato'" vadjust="-35"></markerlabel>
+                </trackmarker>
+                
+                <trackscale class='sminor' interval='10'></trackscale>
+                <trackscale class='smajor' interval='50' showlabels='1' labelclass='sml'></trackscale>
+                <trackscale class='smajorin' interval='50' direction='in'></trackscale>
+                <trackmarker class='marker' start='50' end='250'>
+                    <markerlabel class='mlabel' text='MARKER' type='path'></markerlabel>
+                    <markerlabel class='mlabel' text='Inner' vadjust='-40'></markerlabel>
+                    <markerlabel class='mlabel' text='' type='path' vadjust='55'></markerlabel>
+                </trackmarker>
+            </plasmidtrack>
+        </plasmid>
+  </div>
+  <p class="lead">This is delta version <strong>1.0 by <a href="http://neostek.com">NEOSTEK™</a></strong></p>
+</div>

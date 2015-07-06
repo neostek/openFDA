@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>openFDA Demo</title>
+    <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://rawgit.com/novus/nvd3/v1.1.15-beta/nv.d3.min.css"/>
+    <script src="/assets/js/foundation.js"></script>
+    <script src="/assets/js/templates.js"></script>
+    <script src="/assets/js/routes.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <style>
+        #p1 {border:1px solid #fff}
+        #t1 {fill:#f0f0f0;stroke:#ccc}
+        .sminor {stroke:#ccc}
+        .smajor {stroke:#f00}
+        .sml { fill:#999;font-size:10px }
+        .smajorin { stroke:#999 }
+        .marker { fill:#fc0;stroke:#fc0 }
+        .mlabel { fill:#c00;font-size:10px;font-weight:bold }
+    </style>
+  </head>
+  <body>
+    <div class="grid-frame vertical">
+      <div class="grid-content shrink" style="padding: 0;">
+        <ul class="primary condense menu-bar">
+          <li><a href="/"><strong>openFDA</strong></a></li>
+           <li><a href="/drugs"><strong>openFDA Drugs</strong></a></li>
+        </ul>
+      </div>
+      <div ui-view class="grid-content">
+      </div>
+    </div>
+  </body>
+</html>
