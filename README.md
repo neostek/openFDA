@@ -32,17 +32,6 @@ foundation-apps watch
 
 Get the site running at `http://localhost:3000` with:
 
-```
-bundle exec jekyll serve --watch
-```
-
-(Optional) You can also manually recompile assets at any time by running:
-
-```bash
-grunt less
-grunt minified
-```
-
 # Prerequisites
 
 * Node 0.10.*
